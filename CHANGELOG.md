@@ -1,5 +1,47 @@
 # Changelog
 
+## [0.23.0](https://github.com/sterik000/spotify/compare/v0.22.0...v0.23.0) (2026-10-13)
+
+
+### Features
+
+* an album's page plays Apple Music's animated cover at its top where the album has one ([df6c8c1](https://github.com/sterik000/spotify/commit/df6c8c1b1518bd476047712fddfa9c027ca8cc77))
+* Karaoke and Lyrics have their own rows on Mod Settings' main page, Karaoke's saying whether Sing is on or how far its model has come ([5341f33](https://github.com/sterik000/spotify/commit/5341f338775bc5c9cd59cdcc1e46353d50a804b2))
+* Mod &gt; App icon changes the home screen icon to a Liquid Glass one or the logo in another colour, on iOS 26 ([4834cfd](https://github.com/sterik000/spotify/commit/4834cfdeb4bc2a8927b7266566a74c9497900e00))
+* Pitch follows speed is on until it is turned off ([aed6289](https://github.com/sterik000/spotify/commit/aed6289d08cbbb0e5ffa46aaedd129e50c5d9e47))
+* restore Connect discovery without multicast entitlement ([3c4af4e](https://github.com/sterik000/spotify/commit/3c4af4e190264fcff9bac6a52c65acb04bf1c26a))
+* Sing downloads its voice model from Lyrics &gt; Karaoke, and its switch there turns the microphone on and off at once ([aa70285](https://github.com/sterik000/spotify/commit/aa70285e9c03af2b1645ccec5011689b97474b5b))
+* Sing turns a song's vocals down from the redesigned player's lyrics ([d4a8ecc](https://github.com/sterik000/spotify/commit/d4a8ecc5025ad8f2a525167cf75bfcea83293daf))
+* Sing's microphone shows what Sing is doing on the button itself instead of in words beside it ([c977240](https://github.com/sterik000/spotify/commit/c9772404f46ad0edac66132073dbf6472055093b))
+* Speed and pitch has a Pitch follows speed switch that plays a song faster and higher together, like a record, without the time stretch's smearing ([8d90be3](https://github.com/sterik000/spotify/commit/8d90be37f514101bc356c241ca58180d92ffd3a6)), closes [#5](https://github.com/sterik000/spotify/issues/5)
+* the lyrics in the redesigned player take the whole screen while they play untouched ([03df0e2](https://github.com/sterik000/spotify/commit/03df0e29e1faa6c5a5e8760871e41d2fa25823d9))
+* the redesigned player's ⋯ opens a menu the way the Music app draws one ([9b27ab0](https://github.com/sterik000/spotify/commit/9b27ab03e868be9a4f7d8e8107786a9cde1c5ed4))
+* the redesigned playlist, album and artist pages come in whole instead of a piece at a time ([4c3b0da](https://github.com/sterik000/spotify/commit/4c3b0daae339f7b5ed416f359ab4b3090c9e098a))
+
+
+### Fixes
+
+* a redesigned album, playlist or artist page takes its colour from the cover's main colour, not its bottom edge ([b3c6afa](https://github.com/sterik000/spotify/commit/b3c6afa0959dc55c65d117551bae91f360dd6fa9))
+* fade the pages to black under the redesign's tab bar and now playing bar ([3d4db64](https://github.com/sterik000/spotify/commit/3d4db6429140eb4d2791a65ae9095b90617349c1))
+* harden Connect discovery bridge ([cbbb24e](https://github.com/sterik000/spotify/commit/cbbb24efb6421b17c925abe9b49d43243fe5d983))
+* lyrics come back after the track changes while Spotify is in the background ([76855e0](https://github.com/sterik000/spotify/commit/76855e0f0d272a17688313c080f0dc15aad66618)), closes [#1](https://github.com/sterik000/spotify/issues/1)
+* no dark flash over the screen as the redesigned player's ⋯ menu opens ([18c6989](https://github.com/sterik000/spotify/commit/18c6989fbffd18aae24e3e7defef6570827ddadf))
+* record injected Connect replies before sending them ([87b3014](https://github.com/sterik000/spotify/commit/87b3014f38ec8d82c821a4674cf83a3739a93569))
+* Remove leftover debug line that reshows update notice every launch ([425d68b](https://github.com/sterik000/spotify/commit/425d68bc1761e90a6b5828864720511bcef79fa9))
+* restore Mod Settings row when drawer relayouts ([0a3216a](https://github.com/sterik000/spotify/commit/0a3216a616a71f5a3d8e8c3a24038e2cc19090d5))
+* seeking hands Spotify back the result of its seek instead of whatever Sing's hook left behind ([3cf13e7](https://github.com/sterik000/spotify/commit/3cf13e7c5001197ef1c7d2075042a310f28049e5))
+* Sing downloads its voice model from huggingface.co/Darkkos/spoti-sing, the account that hosts it ([02762ed](https://github.com/sterik000/spotify/commit/02762ed1a08136c32fe9dba6c6492cf31e42b839))
+* Sing says which of iOS 27, the voice model or the iPhone it was built for is missing, instead of naming all three ([4fa59a1](https://github.com/sterik000/spotify/commit/4fa59a1bab70fdd1978bc3087a00b607778c426c))
+* Sing's model download leaves other background sessions' events to their owners ([f4fbf36](https://github.com/sterik000/spotify/commit/f4fbf364e7c56a5d39608e89cbb4514d808d16e4))
+* the player's ⋯ menu opens at once, with no flash of black, and is always on in the redesign ([969da22](https://github.com/sterik000/spotify/commit/969da22893548bffce3001461cc5dc622b4ec53b))
+* the redesigned player's ⋯ menu waits for Spotify's rows as long as it is open instead of turning into Spotify's sheet after 4 s ([5fe0857](https://github.com/sterik000/spotify/commit/5fe0857d39f023b27a8314b33b103e650aa260f6))
+* the update sheet is offered once per release again, not on every launch ([53e7f25](https://github.com/sterik000/spotify/commit/53e7f256b713f811b5128d28f2e97323368dcaac))
+
+
+### Performance
+
+* less work on the main thread as Spotify starts and as a tab first opens ([f4f4652](https://github.com/sterik000/spotify/commit/f4f46526877b3b254015d92a390c646c47d75494)), closes [#2](https://github.com/sterik000/spotify/issues/2)
+
 ## [0.22.0](https://github.com/skopevoj/spoti.pw/compare/v0.21.1...v0.22.0) (2026-09-23)
 
 
